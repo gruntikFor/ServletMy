@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class AddServlet extends HttpServlet {
 
@@ -33,6 +34,9 @@ public class AddServlet extends HttpServlet {
 		System.out.println("sum: " + sum);
 
 		req.setAttribute("sum1", sum);
+
+		HttpSession session = req.getSession();
+		session.setAttribute("sum1", sum);
 
 		res.sendRedirect("sq?sum=" + sum);
 
