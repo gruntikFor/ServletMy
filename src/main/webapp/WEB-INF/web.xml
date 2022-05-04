@@ -4,6 +4,16 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
 	id="WebApp_ID" version="4.0">
 
+	<context-param>
+		<param-name>name</param-name>
+		<param-value>Igor</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>phone-color</param-name>
+		<param-value>acqa</param-value>
+	</context-param>
+
 	<servlet>
 		<servlet-name>abc</servlet-name>
 		<servlet-class>com.gruntik.AddServlet</servlet-class>
@@ -13,7 +23,7 @@
 		<servlet-name>abc</servlet-name>
 		<url-pattern>/add</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>sq</servlet-name>
 		<servlet-class>com.gruntik.SqServlet</servlet-class>
@@ -23,5 +33,22 @@
 		<servlet-name>sq</servlet-name>
 		<url-pattern>/sq</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>my-servlet</servlet-name>
+		<servlet-class>com.gruntik.MyServlet</servlet-class>
+
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>Gruntik</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>my-servlet</servlet-name>
+		<url-pattern>/my</url-pattern>
+	</servlet-mapping>
+
+
 
 </web-app>
