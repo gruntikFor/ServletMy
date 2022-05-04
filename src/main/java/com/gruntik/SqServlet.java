@@ -3,7 +3,9 @@ package com.gruntik;
 import java.awt.PrintGraphics;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,6 +18,16 @@ public class SqServlet extends HttpServlet {
 //		int sum = (int) req.getAttribute("sum");
 //		int sq = sum * sum;
 //
+		int sumCookie = 0;
+
+		Cookie[] cookies = req.getCookies();
+
+		System.out.println("cookies");
+		System.out.println(Arrays.toString(cookies));
+
+		for (Cookie c : cookies) {
+			System.out.println("name: " + c.getName() + " val:" + c.getValue());
+		}
 
 		HttpSession session = req.getSession();
 //		session.removeAttribute("sum1");

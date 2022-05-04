@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -37,6 +38,9 @@ public class AddServlet extends HttpServlet {
 
 		HttpSession session = req.getSession();
 		session.setAttribute("sum1", sum);
+
+		Cookie cookie = new Cookie("sum2", "" + sum);
+		res.addCookie(cookie);
 
 		res.sendRedirect("sq?sum=" + sum);
 
