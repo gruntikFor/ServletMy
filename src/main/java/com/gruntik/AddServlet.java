@@ -1,6 +1,5 @@
 package com.gruntik;
 
-import java.awt.print.Printable;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -33,10 +32,12 @@ public class AddServlet extends HttpServlet {
 		int sum = i + j;
 		System.out.println("sum: " + sum);
 
-		req.setAttribute("sum", sum);
+		req.setAttribute("sum1", sum);
 
-		RequestDispatcher rd = req.getRequestDispatcher("sq");
-		rd.forward(req, res);
+		res.sendRedirect("sq?sum=" + sum);
+
+//		RequestDispatcher rd = req.getRequestDispatcher("sq");
+//		rd.forward(req, res);
 
 	}
 }
