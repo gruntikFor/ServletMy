@@ -39,7 +39,8 @@ public class SqServlet extends HttpServlet {
 		int sum2 = Integer.parseInt(req.getParameter("sum"));
 		sum2 = sum2 * sum2;
 		PrintWriter pw = res.getWriter();
-		pw.println("SqServlet");
+//		pw.println();
+		pw.println("<h1>SqServlet</h1>");
 		pw.println("sum1 = " + sum1);
 		pw.println("sq = " + sum2);
 
