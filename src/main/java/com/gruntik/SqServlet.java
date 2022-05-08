@@ -16,6 +16,9 @@ import javax.servlet.http.HttpSession;
 public class SqServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		
+		
+		int k = 9/0;
 
 //		int sum = (int) req.getAttribute("sum");
 //		int sq = sum * sum;
@@ -43,6 +46,8 @@ public class SqServlet extends HttpServlet {
 		pw.println("<h1>SqServlet</h1>");
 		pw.println("sum1 = " + sum1);
 		pw.println("sq = " + sum2);
+		
+		pw.println("<br>n = " + k);
 
 	}
 }

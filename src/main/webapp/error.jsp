@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-
-<!-- Declaration -->
+	pageEncoding="ISO-8859-1" isErrorPage="true"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,10 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<br>
-	<br>
-	<br>
-	<%=2 + 2%>
-	<sub>It's just footer 2022</sub>
+	<h1 style="color: red;">
+		<%=exception.getMessage()%>
+	</h1>
+
 </body>
 </html>
