@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1" import="java.sql.*"%>
 
 <%@ page import="java.util.Date"%>
 <!-- Declaration -->
@@ -11,7 +11,7 @@
 </head>
 <body>
 
-	<%!int value = 22;%>
+	<%! int value = 22;%>
 	<!-- Directive -->
 
 	<!-- 	Scriplets -->
@@ -26,8 +26,10 @@
 	out.println(new Date());
 	%>
 
-	<%=sum%>
 	<!-- Expression -->
+	<%=sum%>
+
+<%@ include file="footer.jsp" %>
 
 </body>
 </html>
