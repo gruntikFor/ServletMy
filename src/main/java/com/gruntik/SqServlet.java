@@ -17,7 +17,6 @@ public class SqServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		
-		
 		int k = 9/0;
 
 //		int sum = (int) req.getAttribute("sum");
